@@ -1,5 +1,5 @@
-const CACHE='backlog-buddy-v3';
-const CORE=['/','/index.html','/styles.css','/app.js','/config.js','/supabase.js','/manifest.webmanifest','/icons/backlog-buddy.svg','/icons/backlog-buddy-maskable.svg','/papers/dbms-model-paper.pdf','/papers/os-model-paper.pdf','/papers/cn-model-paper.pdf'];
+const CACHE='backlog-buddy-v4';
+const CORE=['/','/index.html','/styles.css','/app.js','/config.js','/supabase.js','/manifest.json','/icons/backlog-buddy.svg','/icons/backlog-buddy-maskable.svg','/papers/dbms-model-paper.pdf','/papers/os-model-paper.pdf','/papers/cn-model-paper.pdf'];
 self.addEventListener('install',event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(CORE)).then(()=>self.skipWaiting()))});
 self.addEventListener('activate',event=>{event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(key=>key!==CACHE).map(key=>caches.delete(key)))).then(()=>self.clients.claim()))});
 self.addEventListener('fetch',event=>{
