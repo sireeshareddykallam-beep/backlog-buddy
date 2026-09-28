@@ -2,6 +2,12 @@
 
 A dependency-free, responsive working UI prototype for an engineering backlog preparation platform.
 
+## Live deployments
+
+- Vercel: https://backlog-buddy.vercel.app
+- Render: https://backlog-buddy-kc5k.onrender.com
+- Repository: https://github.com/sireeshareddykallam-beep/backlog-buddy
+
 ## Run
 
 ```bash
