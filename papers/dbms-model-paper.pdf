@@ -1,0 +1,90 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1511 >>
+stream
+BT
+/F1 16 Tf
+50 790 Td
+(DBMS Model Question Paper) Tj
+/F1 10 Tf
+0 -24 Td
+(R23 | II Year - II Semester | 3 Hours | 70 Marks) Tj
+0 -16 Td
+(Original Backlog Buddy practice resource - not an official university paper.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(PART A - Answer all questions \(10 x 2 = 20 marks\)) Tj
+0 -16 Td
+(1. Define data independence.) Tj
+0 -16 Td
+(2. What is a weak entity?) Tj
+0 -16 Td
+(3. State the purpose of a foreign key.) Tj
+0 -16 Td
+(4. Define functional dependency.) Tj
+0 -16 Td
+(5. Distinguish 3NF and BCNF.) Tj
+0 -16 Td
+(6. State the ACID properties.) Tj
+0 -16 Td
+(7. What is serializability?) Tj
+0 -16 Td
+(8. Define a B+ tree index.) Tj
+0 -16 Td
+(9. What is query optimization?) Tj
+0 -16 Td
+(10. Define database recovery.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(PART B - Answer one question from each unit \(5 x 10 = 50 marks\)) Tj
+0 -16 Td
+(11. Explain three-schema architecture with a neat diagram. OR Design an ER model for a) Tj
+0 -16 Td
+(library.) Tj
+0 -16 Td
+(12. Explain relational algebra operations. OR Write SQL queries using joins and) Tj
+0 -16 Td
+(subqueries.) Tj
+0 -16 Td
+(13. Normalize a relation up to BCNF. OR Explain lossless and dependency-preserving) Tj
+0 -16 Td
+(decomposition.) Tj
+0 -16 Td
+(14. Explain concurrency control using two-phase locking. OR Discuss recovery using logs.) Tj
+0 -16 Td
+(15. Explain B+ tree operations. OR Compare static and dynamic hashing.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(Use previous-paper patterns only for preparation; no question is guaranteed.) Tj
+0 -16 Td
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001804 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1874
+%%EOF

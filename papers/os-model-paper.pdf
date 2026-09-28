@@ -1,0 +1,84 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 595 842] /Resources << /Font << /F1 5 0 R >> >> /Contents 4 0 R >>
+endobj
+4 0 obj
+<< /Length 1322 >>
+stream
+BT
+/F1 16 Tf
+50 790 Td
+(Operating Systems Model Question Paper) Tj
+/F1 10 Tf
+0 -24 Td
+(R23 | II Year - II Semester | 3 Hours | 70 Marks) Tj
+0 -16 Td
+(Original Backlog Buddy practice resource - not an official university paper.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(PART A - Answer all questions \(10 x 2 = 20 marks\)) Tj
+0 -16 Td
+(1. Define a system call.) Tj
+0 -16 Td
+(2. What is a process control block?) Tj
+0 -16 Td
+(3. Define context switching.) Tj
+0 -16 Td
+(4. What is a critical section?) Tj
+0 -16 Td
+(5. State the necessary conditions for deadlock.) Tj
+0 -16 Td
+(6. Define paging.) Tj
+0 -16 Td
+(7. What is thrashing?) Tj
+0 -16 Td
+(8. Define a file allocation method.) Tj
+0 -16 Td
+(9. What is disk scheduling?) Tj
+0 -16 Td
+(10. Define protection domain.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(PART B - Answer one question from each unit \(5 x 10 = 50 marks\)) Tj
+0 -16 Td
+(11. Explain operating-system structures and services.) Tj
+0 -16 Td
+(12. Compare CPU scheduling algorithms with examples.) Tj
+0 -16 Td
+(13. Explain deadlock detection, prevention and avoidance.) Tj
+0 -16 Td
+(14. Discuss virtual memory and page-replacement algorithms.) Tj
+0 -16 Td
+(15. Explain file-system implementation and disk scheduling.) Tj
+0 -16 Td
+() Tj
+0 -16 Td
+(Use previous-paper patterns only for preparation; no question is guaranteed.) Tj
+0 -16 Td
+ET
+endstream
+endobj
+5 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000001615 00000 n 
+trailer
+<< /Size 6 /Root 1 0 R >>
+startxref
+1685
+%%EOF

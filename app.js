@@ -11,6 +11,9 @@ const subjects=[
  {name:'Machine Learning',code:'AI3102',branch:'AI & ML',units:5,resources:48,icon:'ML',color:'mint',desc:'Regression, classification, clustering and evaluation.'}
 ];
 const papers=[
+ {subject:'Database Management Systems',year:2026,university:'NRIU',reg:'R23',semester:'II-II',type:'Model Paper',file:'papers/dbms-model-paper.pdf'},
+ {subject:'Operating Systems',year:2026,university:'NRIU',reg:'R23',semester:'II-II',type:'Model Paper',file:'papers/os-model-paper.pdf'},
+ {subject:'Computer Networks',year:2026,university:'NRIU',reg:'R23',semester:'III-I',type:'Model Paper',file:'papers/cn-model-paper.pdf'},
  {subject:'Database Management Systems',year:2025,university:'JNTUK',reg:'R23',semester:'II-II',type:'Supplementary'},
  {subject:'Operating Systems',year:2025,university:'JNTUK',reg:'R23',semester:'II-II',type:'Regular'},
  {subject:'Computer Networks',year:2024,university:'JNTUH',reg:'R20',semester:'III-I',type:'Supplementary'},
@@ -51,9 +54,8 @@ function renderSubjects(list=subjects){
 }
 function renderPapers(list=papers){
  $('#paperCount').textContent=`${list.length} paper${list.length===1?'':'s'} found`;
- $('#papersList').innerHTML=list.map(p=>`<article class="paper-card"><span class="subject-icon purple"><svg><use href="#i-file"/></svg></span><div class="paper-info"><b>${p.subject}</b><small>${p.university} · ${p.semester} Semester</small></div><div class="paper-meta"><span class="tag">${p.year}</span><span class="tag">${p.reg}</span><span class="tag">${p.type}</span></div><div class="paper-actions"><button class="btn ghost small paper-view">View</button><button class="btn primary small paper-download"><svg><use href="#i-download"/></svg> Download</button></div></article>`).join('')||'<p style="padding:30px;text-align:center;color:var(--muted)">No matching papers found.</p>';
- $$('.paper-view').forEach(b=>b.onclick=()=>toast('Paper preview opened — prototype resource.'));
- $$('.paper-download').forEach(b=>b.onclick=()=>toast('Download simulated. Connect authorized storage for production.'));
+ $('#papersList').innerHTML=list.map(p=>`<article class="paper-card"><span class="subject-icon purple"><svg><use href="#i-file"/></svg></span><div class="paper-info"><b>${p.subject}</b><small>${p.university} · ${p.semester} Semester${p.file?' · Original practice resource':''}</small></div><div class="paper-meta"><span class="tag">${p.year}</span><span class="tag">${p.reg}</span><span class="tag">${p.type}</span></div><div class="paper-actions">${p.file?`<a class="btn ghost small" href="${p.file}" target="_blank" rel="noopener">View</a><a class="btn primary small" href="${p.file}" download><svg><use href="#i-download"/></svg> Download PDF</a>`:`<button class="btn ghost small paper-unavailable">View details</button>`}</div></article>`).join('')||'<p style="padding:30px;text-align:center;color:var(--muted)">No matching papers found.</p>';
+ $$('.paper-unavailable').forEach(b=>b.onclick=()=>toast('This archive record needs an authorized PDF before download.'));
 }
 function filterPapers(){let q=$('#paperSearch').value.toLowerCase(),u=$('#paperUniversity').value,r=$('#paperReg').value;renderPapers(papers.filter(p=>p.subject.toLowerCase().includes(q)&&(u.startsWith('All')||p.university===u)&&(r.startsWith('All')||p.reg===r)))}
 function renderFinder(){
@@ -70,7 +72,7 @@ $('#findSubjectBtn').onclick=()=>$('#finder').scrollIntoView({behavior:'smooth'}
 function renderSubjectContent(){
  const units=[['Introduction & ER Model',['Explain three-schema architecture and data independence.','Draw an ER diagram for a university database.']],['Relational Algebra & SQL',['Compare relational algebra operations with examples.','Write SQL queries using joins, nested queries and aggregation.']],['Normalization',['Explain functional dependencies and normalization up to BCNF.','Find the highest normal form of the given relation.']]];
  $('#unitQuestions').innerHTML=units.map((u,i)=>`<div class="unit"><div class="unit-head"><span>Unit ${i+1} · ${u[0]}</span><span>${u[1].length} questions</span></div>${u[1].map((q,j)=>`<div class="question-row"><span>${q}</span><span class="badge ${j?'imp':'freq'}">${j?'Important':'Frequently asked'}</span><span class="tag">${j?'10':'5'} marks</span></div>`).join('')}</div>`).join('');
- $('#subjectPapers').innerHTML=papers.filter(p=>p.subject.includes('Database')).slice(0,3).map(p=>`<div class="paper-mini"><span class="subject-icon purple"><svg><use href="#i-file"/></svg></span><div><b>${p.year} ${p.type} Paper</b><small>${p.university} · ${p.reg} · ${p.semester}</small></div><button class="paper-download">Download PDF</button></div>`).join('');
+ $('#subjectPapers').innerHTML=papers.filter(p=>p.subject.includes('Database')).slice(0,3).map(p=>`<div class="paper-mini"><span class="subject-icon purple"><svg><use href="#i-file"/></svg></span><div><b>${p.year} ${p.type}</b><small>${p.university} · ${p.reg} · ${p.semester}</small></div>${p.file?`<a class="link-btn" href="${p.file}" download>Download PDF</a>`:`<button class="paper-unavailable">Details</button>`}</div>`).join('');
 }
 function renderDashboard(){ $('#mySubjects').innerHTML=subjects.slice(0,3).map((s,i)=>`<div class="my-subject-row"><span class="subject-icon ${s.color}">${s.icon}</span><div><b>${s.name}</b><small>${[68,42,25][i]}% prepared</small></div><div class="progress"><i style="width:${[68,42,25][i]}%"></i></div><button class="link-btn open-subject">Continue</button></div>`).join('') }
 
