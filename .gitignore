@@ -1,0 +1,6 @@
+# Never commit local/private credentials
+.env
+.env.*
+!.env.example
+.DS_Store
+.vercel/

@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Backlog Buddy — prepare smart and clear engineering backlogs." />
+  <title>Backlog Buddy — Prepare Smart</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <svg class="svg-sprite" aria-hidden="true">
+    <symbol id="i-book" viewBox="0 0 24 24"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20V4H6.5A2.5 2.5 0 0 0 4 6.5v13Z"/><path d="M4 19.5v-13M8 8h8M8 12h6"/></symbol>
+    <symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-4-4"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M6 2h8l4 4v16H6z"/><path d="M14 2v5h5M9 12h6M9 16h6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path d="M12 3v12m-4-4 4 4 4-4M5 21h14"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path d="m8 5 11 7-11 7z"/></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path d="M20 15.5A8.5 8.5 0 1 1 8.5 4 7 7 0 0 0 20 15.5Z"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M4.9 4.9l1.4 1.4m11.4 11.4 1.4 1.4M2 12h2m16 0h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14m-5-5 5 5-5 5"/></symbol>
+    <symbol id="i-user" viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M18 6 6 18"/></symbol>
+  </svg>
+
+  <header class="topbar">
+    <a href="#home" class="brand" data-nav="home"><span class="brand-mark"><svg><use href="#i-book"/></svg></span><span>Backlog <b>Buddy</b></span></a>
+    <nav id="nav" aria-label="Main navigation">
+      <a href="#home" data-nav="home" class="active">Home</a><a href="#courses" data-nav="courses">Courses</a><a href="#subjects" data-nav="subjects">Subjects</a><a href="#papers" data-nav="papers">Previous Papers</a><a href="#practice" data-nav="practice">Practice</a><a href="#planner" data-nav="planner">Study Planner</a><a href="#about" data-nav="about">About</a>
+    </nav>
+    <div class="header-actions"><button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode"><svg><use href="#i-moon"/></svg></button><button class="profile-btn" id="accountBtn" aria-label="Sign in or open dashboard"><svg><use href="#i-user"/></svg><span id="accountLabel">Sign in</span></button><button id="menuBtn" class="icon-btn mobile-menu" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button></div>
+  </header>
+
+  <main>
+    <section id="page-home" class="page active">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="eyebrow"><span>●</span> Built for engineering students</div>
+          <h1>Prepare Smart.<br/><em>Clear Your Backlogs.</em></h1>
+          <p>Find subject-wise important questions, previous papers, model papers and study resources—all organized for your university, regulation and semester.</p>
+          <div class="hero-actions"><button class="btn primary" id="findSubjectBtn">Find Your Subject <svg><use href="#i-arrow"/></svg></button><button class="btn ghost" data-nav="papers"><svg><use href="#i-file"/></svg> Browse Papers</button></div>
+          <div class="trust"><span><svg><use href="#i-check"/></svg> Curated resources</span><span><svg><use href="#i-check"/></svg> Easy to use</span><span><svg><use href="#i-check"/></svg> Free prototype</span></div>
+        </div>
+        <div class="hero-visual">
+          <div class="study-card floating-card">
+            <div class="card-top"><span class="subject-icon purple">DB</span><div><small>YOUR NEXT EXAM</small><strong>Database Management Systems</strong></div><span class="pill amber">12 days</span></div>
+            <div class="progress-label"><span>Preparation progress</span><b>68%</b></div><div class="progress"><i style="width:68%"></i></div>
+            <div class="mini-stats"><div><b>42</b><small>Questions</small></div><div><b>8</b><small>Papers</small></div><div><b>5</b><small>Units</small></div></div>
+            <button class="btn primary full" data-nav="subject">Continue preparing <svg><use href="#i-arrow"/></svg></button>
+          </div>
+          <div class="float-note note-one"><span>✓</span><div><b>Unit 3 complete!</b><small>Keep it going</small></div></div>
+          <div class="float-note note-two"><svg><use href="#i-file"/></svg><div><b>2024 Paper</b><small>Newly added</small></div></div>
+        </div>
+      </div>
+
+      <div class="search-wrap"><svg><use href="#i-search"/></svg><input id="globalSearch" placeholder="Search subject, question paper or topic…" autocomplete="off"/><kbd>⌘ K</kbd><button id="searchBtn">Search</button><div id="searchResults" class="search-results"></div></div>
+
+      <div class="quick-grid section-pad">
+        <button data-nav="papers" class="quick-card"><span class="quick-icon blue"><svg><use href="#i-file"/></svg></span><div><b>Previous Papers</b><small>University exam papers</small></div><svg class="chev"><use href="#i-arrow"/></svg></button>
+        <button data-nav="subjects" class="quick-card"><span class="quick-icon coral">?</span><div><b>Important Questions</b><small>Unit-wise curated lists</small></div><svg class="chev"><use href="#i-arrow"/></svg></button>
+        <button data-nav="papers" class="quick-card"><span class="quick-icon mint"><svg><use href="#i-file"/></svg></span><div><b>Model Papers</b><small>Exam-ready practice</small></div><svg class="chev"><use href="#i-arrow"/></svg></button>
+        <button data-nav="subject" class="quick-card"><span class="quick-icon gold"><svg><use href="#i-book"/></svg></span><div><b>Syllabus</b><small>Updated unit structure</small></div><svg class="chev"><use href="#i-arrow"/></svg></button>
+        <button data-nav="subject" class="quick-card"><span class="quick-icon lavender">▤</span><div><b>Study Materials</b><small>Notes & quick guides</small></div><svg class="chev"><use href="#i-arrow"/></svg></button>
+      </div>
+
+      <section class="finder section-pad" id="finder">
+        <div class="section-heading"><div><span class="kicker">GET STARTED</span><h2>Find the right resources</h2><p>Tell us what you study. We’ll organize the rest.</p></div><div class="step-counter"><b id="stepNow">1</b><span>of 7</span></div></div>
+        <div class="stepper" id="stepper"></div>
+        <div class="finder-box">
+          <div class="finder-title"><span id="stepBadge">Step 1</span><div><h3 id="stepTitle">Select your university</h3><p id="stepHint">Choose the university your college is affiliated with.</p></div></div>
+          <div id="optionGrid" class="option-grid"></div>
+          <div class="finder-controls"><button class="btn ghost" id="backStep" disabled>Back</button><button class="btn primary" id="nextStep" disabled>Continue <svg><use href="#i-arrow"/></svg></button></div>
+        </div>
+      </section>
+
+      <section class="why section-pad"><div class="section-heading centered"><div><span class="kicker">WHY BACKLOG BUDDY?</span><h2>Everything you need. Nothing you don’t.</h2><p>Less searching, more focused preparation.</p></div></div><div class="feature-grid"><article><span>01</span><h3>Organized your way</h3><p>Filter by university, branch, regulation, year, semester and subject.</p></article><article><span>02</span><h3>Prepare with focus</h3><p>Prioritize frequently appeared topics and important questions without misleading guarantees.</p></article><article><span>03</span><h3>Track your progress</h3><p>Practice questions, save resources and follow a realistic study plan.</p></article></div></section>
+    </section>
+
+    <section id="page-subjects" class="page inner-page"><div class="page-hero"><span class="kicker">EXPLORE SUBJECTS</span><h1>What are you preparing for?</h1><p>Browse popular subjects or use the guided finder to get a personalized list.</p></div><div class="toolbar"><div class="input-icon"><svg><use href="#i-search"/></svg><input id="subjectSearch" placeholder="Search subjects or topics"/></div><select id="branchFilter"><option>All branches</option><option>CSE</option><option>ECE</option><option>EEE</option><option>Mechanical</option><option>Civil</option></select></div><div id="subjectGrid" class="resource-grid"></div></section>
+
+    <section id="page-courses" class="page inner-page"><div class="page-hero"><span class="kicker">COURSES</span><h1>Built for your curriculum</h1><p>Select a course and branch to discover relevant resources.</p></div><div class="course-layout"><aside><h3>Degree</h3><button class="filter-active">B.Tech</button><button>B.E.</button><h3>Branches</h3><button>CSE</button><button>ECE</button><button>EEE</button><button>Mechanical</button><button>Civil</button><button>AI & ML</button><button>Data Science</button><button>IT</button></aside><div><div class="course-banner"><span class="subject-icon purple">CS</span><div><span class="kicker">B.TECH</span><h2>Computer Science & Engineering</h2><p>48 subjects · 6 regulations · 320+ resources</p></div></div><div id="courseSubjects" class="resource-grid compact"></div></div></div></section>
+
+    <section id="page-subject" class="page inner-page"><div class="breadcrumbs">Home / CSE / R23 / 2nd Year / <b>Database Management Systems</b></div><div class="subject-head"><div><div class="tag-row"><span class="tag">CSE</span><span class="tag">R23</span><span class="tag">II Year · II Semester</span></div><h1>Database Management Systems</h1><p>Subject code: CS2203 · 5 units · Updated Sep 2026</p></div><div class="subject-actions"><button class="btn ghost">♡ Save</button><button class="btn primary" data-nav="practice"><svg><use href="#i-play"/></svg> Start Practice</button></div></div><div class="subject-layout"><aside class="subject-nav"><button class="active">Overview</button><button>Syllabus</button><button>Important Questions</button><button>Frequently Asked</button><button>Previous Papers</button><button>Model Papers</button><button>Study Materials</button><button>Preparation Tips</button></aside><div class="subject-content"><div class="overview-grid"><article><small>YOUR PROGRESS</small><strong>68%</strong><div class="progress"><i style="width:68%"></i></div><span>3 of 5 units covered</span></article><article><small>AVAILABLE RESOURCES</small><strong>64</strong><span>Questions, papers & notes</span></article><article><small>EST. PREP TIME</small><strong>18 hrs</strong><span>Based on your pace</span></article></div><div class="content-card"><div class="card-heading"><div><h2>Unit-wise Important Questions</h2><p>Questions marked based on frequency in available institution-provided papers.</p></div><button class="btn ghost small">View all</button></div><div id="unitQuestions"></div></div><div class="content-card"><div class="card-heading"><div><h2>Previous Year Papers</h2><p>Authorized and institution-provided resources.</p></div><button class="btn ghost small" data-nav="papers">View all papers</button></div><div id="subjectPapers"></div></div><div class="content-card"><h2>Preparation tips</h2><div class="tips"><p><b>1.</b> Start with relational algebra and normalization—they connect to multiple units.</p><p><b>2.</b> Practice one SQL problem every day instead of only reading solutions.</p><p><b>3.</b> Use available previous papers to understand patterns, not predict guaranteed questions.</p></div></div></div></div></section>
+
+    <section id="page-papers" class="page inner-page"><div class="page-hero inline"><div><span class="kicker">RESOURCE LIBRARY</span><h1>Previous Question Papers</h1><p>Search legally shared, institution-provided and properly licensed papers.</p></div><div class="stat-chip"><b>1,240+</b><span>verified resources</span></div></div><div class="filter-panel"><div class="input-icon grow"><svg><use href="#i-search"/></svg><input id="paperSearch" placeholder="Search subject or paper…"/></div><select id="paperUniversity"><option>All universities</option><option>JNTUK</option><option>JNTUH</option><option>AU</option></select><select id="paperReg"><option>All regulations</option><option>R23</option><option>R20</option><option>R21</option></select><select><option>All exam types</option><option>Supplementary</option><option>Regular</option><option>Model</option></select></div><div class="result-meta"><b id="paperCount">6 papers found</b><span>Sorted by newest first</span></div><div id="papersList" class="papers-list"></div><p class="legal-note">ⓘ Only legally uploaded, public-domain, institution-provided or properly licensed papers are listed. Copyrighted materials require permission.</p></section>
+
+    <section id="page-practice" class="page inner-page"><div class="page-hero"><span class="kicker">ACTIVE RECALL</span><h1>Practice, learn, repeat.</h1><p>Test concepts with MCQs and short answers. Explanations help you learn from every attempt.</p></div><div class="practice-layout"><aside class="practice-stats"><h3>Today’s progress</h3><div class="ring"><span><b id="practiceScore">0</b>%</span></div><p id="practiceDone">0 of 3 questions answered</p><hr/><div><span>Current streak</span><b>🔥 4 days</b></div><div><span>Total practiced</span><b>128</b></div></aside><div class="quiz-card"><div class="quiz-top"><span class="tag">DBMS · Unit 3</span><span id="quizNumber">Question 1 of 3</span></div><h2 id="quizQuestion"></h2><div id="quizOptions" class="quiz-options"></div><div id="explanation" class="explanation"></div><div class="quiz-actions"><button class="btn ghost">♡ Save question</button><button id="nextQuestion" class="btn primary" disabled>Check answer</button></div></div></div></section>
+
+    <section id="page-planner" class="page inner-page"><div class="page-hero"><span class="kicker">STUDY PLANNER</span><h1>A realistic plan for your comeback.</h1><p>Share your workload and time. We’ll create a focused, balanced timetable.</p></div><div class="planner-layout"><form id="plannerForm" class="planner-form"><h2>Build my study plan</h2><label>Number of backlog subjects<input type="number" id="backlogCount" min="1" max="10" value="3" required/></label><label>Next exam date<input type="date" id="examDate" required/></label><label>Available study hours per day<div class="range-row"><input type="range" id="hours" min="1" max="10" value="4"/><output id="hoursOut">4 hours</output></div></label><label>Preferred study time<select id="studyTime"><option>Morning</option><option>Evening</option><option>Split across the day</option></select></label><button class="btn primary full" type="submit">Generate my timetable <svg><use href="#i-arrow"/></svg></button></form><div id="planResult" class="plan-result empty"><div class="empty-illustration"><svg><use href="#i-clock"/></svg></div><h3>Your plan will appear here</h3><p>Complete the details and we’ll build a balanced schedule with revision days included.</p></div></div></section>
+
+    <section id="page-dashboard" class="page inner-page"><div class="dashboard-head"><div><span class="kicker">WELCOME BACK, STUDENT</span><h1>Ready to make progress?</h1><p>You’re on a 4-day practice streak. Keep it up!</p></div><button class="btn primary" data-nav="subjects">+ Add a subject</button></div><div class="dash-stats"><article><span class="quick-icon lavender"><svg><use href="#i-book"/></svg></span><div><small>MY SUBJECTS</small><b>4</b><em>2 exams soon</em></div></article><article><span class="quick-icon coral">!</span><div><small>MY BACKLOGS</small><b>3</b><em>Next in 12 days</em></div></article><article><span class="quick-icon mint">✓</span><div><small>PRACTICE PROGRESS</small><b>68%</b><em>+12% this week</em></div></article><article><span class="quick-icon gold">♡</span><div><small>SAVED QUESTIONS</small><b>24</b><em>Across 4 subjects</em></div></article></div><div class="dashboard-grid"><div class="content-card"><div class="card-heading"><div><h2>My subjects</h2><p>Continue where you left off</p></div><button class="link-btn" data-nav="subjects">View all</button></div><div id="mySubjects"></div></div><div class="content-card"><div class="card-heading"><div><h2>Today’s plan</h2><p>Monday, September 28</p></div></div><div class="today-task"><input type="checkbox" checked/><div><b>DBMS · Normalization</b><small>45 min · completed</small></div></div><div class="today-task"><input type="checkbox"/><div><b>OS · Deadlocks</b><small>60 min · up next</small></div></div><div class="today-task"><input type="checkbox"/><div><b>CN · Transport Layer</b><small>45 min</small></div></div></div></div></section>
+
+    <section id="page-about" class="page inner-page"><div class="about-hero"><span class="brand-mark large"><svg><use href="#i-book"/></svg></span><span class="kicker">OUR MISSION</span><h1>Backlogs are a setback,<br/>not the end of the story.</h1><p>Backlog Buddy gives engineering students one calm, organized place to prepare—without hype, clutter or false promises.</p></div><div class="about-values"><article><b>01</b><h2>Student first</h2><p>Simple language, useful organization and mobile-friendly access.</p></article><article><b>02</b><h2>Responsible resources</h2><p>Only authorized, institution-provided, public-domain or licensed materials.</p></article><article><b>03</b><h2>Honest guidance</h2><p>We identify useful patterns, but never guarantee what will appear in an exam.</p></article></div></section>
+
+    <section id="page-admin" class="page inner-page"><div class="dashboard-head"><div><span class="kicker">AUTHORIZED ACCESS</span><h1>Content Admin</h1><p>Manage the catalog and learning resources.</p></div><button class="btn primary" id="addContent">+ Add content</button></div><div class="admin-tabs"><button class="active">Overview</button><button>Universities</button><button>Subjects</button><button>Questions</button><button>Papers</button><button>Materials</button></div><div class="dash-stats"><article><div><small>UNIVERSITIES</small><b>8</b><em>+1 this month</em></div></article><article><div><small>SUBJECTS</small><b>286</b><em>Across 8 branches</em></div></article><article><div><small>QUESTIONS</small><b>4,892</b><em>164 pending review</em></div></article><article><div><small>PAPERS</small><b>1,240</b><em>32 pending license check</em></div></article></div><div class="content-card"><div class="card-heading"><div><h2>Recent content</h2><p>Review and manage new additions</p></div><div class="input-icon"><svg><use href="#i-search"/></svg><input placeholder="Search content"/></div></div><div class="admin-table"><div class="table-row header"><span>Title</span><span>Type</span><span>Status</span><span>Updated</span><span></span></div><div class="table-row"><span><b>DBMS Supplementary 2024</b><small>JNTUK · R23</small></span><span>Paper</span><span class="status published">Published</span><span>Sep 26</span><button>•••</button></div><div class="table-row"><span><b>Operating Systems — Unit 4</b><small>32 important questions</small></span><span>Questions</span><span class="status review">In review</span><span>Sep 25</span><button>•••</button></div><div class="table-row"><span><b>Computer Networks Quick Notes</b><small>Licensed under CC BY 4.0</small></span><span>Material</span><span class="status published">Published</span><span>Sep 24</span><button>•••</button></div></div></div></section>
+  </main>
+
+  <footer><div><a href="#home" class="brand" data-nav="home"><span class="brand-mark"><svg><use href="#i-book"/></svg></span><span>Backlog <b>Buddy</b></span></a><p>Prepare smart. Make your comeback.</p></div><div><b>Explore</b><a data-nav="subjects">Subjects</a><a data-nav="papers">Previous Papers</a><a data-nav="practice">Practice</a></div><div><b>Support</b><a data-nav="about">About</a><a>Content policy</a><a data-nav="admin">Admin</a></div><div class="footer-note">Made with care for engineering students.<br/>© 2026 Backlog Buddy</div></footer>
+  <div id="authModal" class="modal" aria-hidden="true">
+    <div class="modal-backdrop" data-close-auth></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="authTitle">
+      <button class="modal-close" data-close-auth aria-label="Close"><svg><use href="#i-close"/></svg></button>
+      <span class="brand-mark"><svg><use href="#i-book"/></svg></span>
+      <span class="kicker">STUDENT ACCOUNT</span><h2 id="authTitle">Welcome back</h2><p id="authSubtitle">Sign in to save subjects, progress and study plans.</p>
+      <form id="authForm"><label id="nameField">Full name<input id="authName" autocomplete="name"/></label><label>Email<input id="authEmail" type="email" autocomplete="email" required/></label><label>Password<input id="authPassword" type="password" minlength="6" autocomplete="current-password" required/></label><p id="authError" class="auth-error"></p><button class="btn primary full" id="authSubmit" type="submit">Sign in</button></form>
+      <button class="auth-switch" id="authSwitch">New to Backlog Buddy? Create an account</button>
+      <button class="auth-switch signout" id="signOutBtn">Sign out</button>
+    </div>
+  </div>
+  <div id="toast" class="toast"></div>
+  <script src="config.js"></script>
+  <script src="supabase.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
