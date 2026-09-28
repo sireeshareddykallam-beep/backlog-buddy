@@ -104,6 +104,17 @@ $('#subjectSearch').oninput=e=>{let q=e.target.value.toLowerCase(),b=$('#branchF
 $('#themeBtn').onclick=()=>{let dark=document.documentElement.dataset.theme!=='dark';document.documentElement.dataset.theme=dark?'dark':'light';$('#themeBtn use').setAttribute('href',dark?'#i-sun':'#i-moon');localStorage.setItem('bb-theme',dark?'dark':'light')};
 if(localStorage.getItem('bb-theme')==='dark'){$('#themeBtn').click()}
 $('#menuBtn').onclick=()=>$('#nav').classList.toggle('open');
+
+// Installable PWA, offline state, and service-worker update handling.
+let deferredInstallPrompt=null,waitingWorker=null;
+const installBtn=$('#installAppBtn'),offlineBanner=$('#offlineBanner'),updateBanner=$('#updateBanner');
+function updateNetworkState(){offlineBanner.classList.toggle('show',!navigator.onLine)}
+window.addEventListener('online',()=>{updateNetworkState();toast('You’re back online')});window.addEventListener('offline',updateNetworkState);updateNetworkState();
+window.addEventListener('beforeinstallprompt',event=>{event.preventDefault();deferredInstallPrompt=event;installBtn.hidden=false});
+window.addEventListener('appinstalled',()=>{installBtn.hidden=true;deferredInstallPrompt=null;toast('Backlog Buddy installed successfully')});
+installBtn.onclick=async()=>{if(!deferredInstallPrompt){toast('Use your browser menu and choose “Install app” or “Add to Home Screen”.');return}deferredInstallPrompt.prompt();await deferredInstallPrompt.userChoice;deferredInstallPrompt=null;installBtn.hidden=true};
+$('#applyUpdateBtn').onclick=()=>{if(waitingWorker)waitingWorker.postMessage('SKIP_WAITING')};
+if('serviceWorker' in navigator){window.addEventListener('load',async()=>{try{const registration=await navigator.serviceWorker.register('/sw.js');if(registration.waiting){waitingWorker=registration.waiting;updateBanner.classList.add('show')}registration.addEventListener('updatefound',()=>{const worker=registration.installing;worker?.addEventListener('statechange',()=>{if(worker.state==='installed'&&navigator.serviceWorker.controller){waitingWorker=worker;updateBanner.classList.add('show')}})});navigator.serviceWorker.addEventListener('controllerchange',()=>location.reload())}catch(error){console.warn('Offline mode unavailable:',error.message)}})}
 function toast(msg){let t=$('#toast');t.textContent=msg;t.classList.add('show');clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>t.classList.remove('show'),2700)}window.toast=toast;
 $('#addContent').onclick=()=>toast('Content form ready for backend integration.');
 

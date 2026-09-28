@@ -4,7 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="Backlog Buddy — prepare smart and clear engineering backlogs." />
+  <meta name="theme-color" content="#6957e8" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-title" content="Backlog Buddy" />
   <title>Backlog Buddy — Prepare Smart</title>
+  <link rel="manifest" href="manifest.webmanifest" />
+  <link rel="icon" href="icons/backlog-buddy.svg" type="image/svg+xml" />
+  <link rel="apple-touch-icon" href="icons/backlog-buddy.svg" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -30,9 +37,11 @@
     <nav id="nav" aria-label="Main navigation">
       <a href="#home" data-nav="home" class="active">Home</a><a href="#courses" data-nav="courses">Courses</a><a href="#subjects" data-nav="subjects">Subjects</a><a href="#papers" data-nav="papers">Previous Papers</a><a href="#practice" data-nav="practice">Practice</a><a href="#planner" data-nav="planner">Study Planner</a><a href="#about" data-nav="about">About</a>
     </nav>
-    <div class="header-actions"><button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode"><svg><use href="#i-moon"/></svg></button><button class="profile-btn" id="accountBtn" aria-label="Sign in or open dashboard"><svg><use href="#i-user"/></svg><span id="accountLabel">Sign in</span></button><button id="menuBtn" class="icon-btn mobile-menu" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button></div>
+    <div class="header-actions"><button id="installAppBtn" class="install-btn" hidden><svg><use href="#i-download"/></svg><span>Install app</span></button><button id="themeBtn" class="icon-btn" aria-label="Toggle dark mode"><svg><use href="#i-moon"/></svg></button><button class="profile-btn" id="accountBtn" aria-label="Sign in or open dashboard"><svg><use href="#i-user"/></svg><span id="accountLabel">Sign in</span></button><button id="menuBtn" class="icon-btn mobile-menu" aria-label="Open menu"><svg><use href="#i-menu"/></svg></button></div>
   </header>
 
+  <div id="offlineBanner" class="offline-banner" role="status">You’re offline. Saved pages and downloaded papers are still available.</div>
+  <div id="updateBanner" class="update-banner" role="status"><span>A new Backlog Buddy update is ready.</span><button id="applyUpdateBtn">Update now</button></div>
   <main>
     <section id="page-home" class="page active">
       <div class="hero">
