@@ -4,7 +4,7 @@ A dependency-free, responsive working UI prototype for an engineering backlog pr
 
 ## Live deployments
 
-- Vercel: https://backlog-buddy.vercel.app
+- Vercel: https://backlog-buddy-tech-minds10.vercel.app
 - Render: https://backlog-buddy-kc5k.onrender.com
 - Repository: https://github.com/sireeshareddykallam-beep/backlog-buddy
 
