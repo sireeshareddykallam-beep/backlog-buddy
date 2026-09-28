@@ -2,6 +2,7 @@
 insert into public.universities(name,code,region) values
 ('Jawaharlal Nehru Technological University Kakinada','JNTUK','Andhra Pradesh'),
 ('Jawaharlal Nehru Technological University Hyderabad','JNTUH','Telangana'),
+('NRI University','NRIU','Andhra Pradesh'),
 ('Andhra University','AU','Andhra Pradesh');
 insert into public.courses(name,code) values ('Bachelor of Technology','BTECH'),('Bachelor of Engineering','BE');
 insert into public.branches(course_id,name,code) select id,'Computer Science and Engineering','CSE' from public.courses where code='BTECH';

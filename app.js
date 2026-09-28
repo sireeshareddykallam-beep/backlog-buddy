@@ -24,7 +24,7 @@ const quiz=[
  {q:'A transaction that reads data written by an uncommitted transaction may cause which anomaly?',o:['Dirty read','Phantom write','Lost schema','Index overflow'],a:0,e:'A dirty read occurs when one transaction reads uncommitted changes made by another transaction.'}
 ];
 const finderSteps=[
- {title:'Select your university',hint:'Choose the university your college is affiliated with.',opts:[['JNTUK','Jawaharlal Nehru Technological University Kakinada'],['JNTUH','Jawaharlal Nehru Technological University Hyderabad'],['Andhra University','Visakhapatnam'],['SVU','Sri Venkateswara University']]},
+ {title:'Select your university',hint:'Choose the university your college is affiliated with.',opts:[['JNTUK','Jawaharlal Nehru Technological University Kakinada'],['JNTUH','Jawaharlal Nehru Technological University Hyderabad'],['NRI University','Andhra Pradesh'],['Andhra University','Visakhapatnam'],['SVU','Sri Venkateswara University']]},
  {title:'Select your course',hint:'Choose your engineering degree.',opts:[['B.Tech','Bachelor of Technology'],['B.E.','Bachelor of Engineering']]},
  {title:'Select your branch',hint:'Choose your engineering specialization.',opts:['CSE','ECE','EEE','Mechanical','Civil','AI & ML','Data Science','IT']},
  {title:'Select your regulation',hint:'Choose the regulation applicable to your batch.',opts:['R20','R21','R22','R23','R24']},
